@@ -1,5 +1,6 @@
 public abstract class TriggerHandler {
-     
+    
+    
     public void start(){
          switch on Trigger.operationType {
             when BEFORE_INSERT {
