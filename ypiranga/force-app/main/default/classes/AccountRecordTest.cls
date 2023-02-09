@@ -13,6 +13,7 @@ public class AccountRecordTest {
                for(Database.Error err : sr.getErrors()) {
                    system.assert(err.getMessage().contains(ac2.BillingPostalCode));
                    countError++;
+                 
                }
             }
        }
@@ -28,4 +29,5 @@ public class AccountRecordTest {
        }
         
     }
+
 }

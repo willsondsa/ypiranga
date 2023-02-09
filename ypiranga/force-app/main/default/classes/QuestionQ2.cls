@@ -1,5 +1,5 @@
 public class QuestionQ2 {
-   public  static void BloqueiaIntegracao1(List<Opportunity> Opp){
+     Public static void BloqueiaIntegracao1(List<Opportunity> Opp){
     set<Id>oppids=new set<id>();
     for(Opportunity OppA : Opp)
         oppids.add(OppA.id);
@@ -17,7 +17,7 @@ public class QuestionQ2 {
 }
 
 
-public static void BloqueiaIntegracao2(List<Opportunity> Opp){
+Public static void BloqueiaIntegracao2(List<Opportunity> Opp){
     set<Id>oppids=new set<id>();
     for(Opportunity OppA : Opp)
         oppids.add(OppA.id);
