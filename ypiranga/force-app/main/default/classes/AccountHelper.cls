@@ -6,7 +6,7 @@ public class AccountHelper {
     }
     public static void checkcepRecords(List<account>newAccounts,map<id,Account>oldAccounts){
         for(Account c:newAccounts){
-            if(!c.BillingPostalCode.contains('-'))
+            if(!c.BillingPostalCode.contains('-') && c.BillingPostalCode.length()>5)
                 c.BillingPostalCode=c.BillingPostalCode.substring(0,5)+'-'+c.BillingPostalCode.substring(5,c.BillingPostalCode.length());
             if(((oldAccounts!=null && oldAccounts.get(c.id).BillingPostalCode!=c.BillingPostalCode) ||(oldAccounts==null)) && !ValidCep(c.BillingPostalCode))
                c.addError(' Cep Invalido :'+c.BillingPostalCode);
