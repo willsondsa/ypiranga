@@ -1,14 +1,11 @@
 <template>
-   
-    <div class="flex-container slds-gutters">
-       <div >
-          <lightning-input  type="checkbox" data-id="SelectALL" onchange={handleSelectLine}  ></lightning-input>
-       </div>
-       <div class="slds-col slds-size_2-of-7">Client</div>
-       <div class="slds-col slds-size_2-of-7">Truck</div>
-       <div class="slds-col slds-size_1-of-7">Type</div>
-       <div class="slds-col slds-size_1-of-7">Status</div>
-       <div class="slds-col slds-size_1-of-7">Quantity</div>
+    <lightning-card  title="registration new " icon-name="standard:account">
+    <div class="container flex-start">
+       <div class="item" style="text-align:center">Type</div>
+       <div class="item">Client</div>
+       <div class="item">Truck</div>
+       <div class="item">Status</div>
+       <div class="item">Quantity</div>
      
     </div>
     <template if:true={load}>
@@ -17,35 +14,44 @@
        </div>
     </template>
     <template for:each={records} for:item="r">
-       <div class="flex-container" key={r.fakeId}>
+       <div class="container" key={r.fakeId}>
           <lightning-record-edit-form
              object-api-name="IPI_Quote__c"  
              data-id={r.fakeId}
              >
-             <div class="flex-container slds-gutters">
-                <div>
+             <div class="container flex-start">
+                <div class="item">
                    <lightning-input  type="checkbox" data-id={r.fakeId} onchange={handleSelectLine} field-name="Selected" ></lightning-input>
-                </div>
-                <div class="slds-col slds-size_2-of-8">
+                </div >
+                <div class="item">
+                    <lightning-input-field field-name="IPI_Type__c" variant="label-hidden" data-id={r.fakeId}  placeholder="type" onchange={handleSelectLine}> </lightning-input-field>
+                 </div>
+              <div class="container flex-start" if:true={isNewbussines} data-id={r.fakeId} >
+                <div class="item">
                    <lightning-input-field field-name="IPI_Client__c" variant="label-hidden" data-id={r.fakeId} onchange={handleSelectLine}> </lightning-input-field>
-                </div>
-                <div class="slds-col slds-size_2-of-8">
+                </div >
+                <div class="item">
                    <lightning-input-field field-name="IPI_Truck__c" variant="label-hidden" data-id={r.fakeId} onchange={handleSelectLine}> </lightning-input-field>
                 </div>
-                <div class="slds-col slds-size_1-of-8">
-                   <lightning-input-field field-name="IPI_Type__c" variant="label-hidden" data-id={r.fakeId}  placeholder="type" onchange={handleSelectLine}> </lightning-input-field>
-                </div>
-                <div class="slds-col slds-size_1-of-8">
+                <div class="item">
                    <lightning-input-field field-name="IPI_Status__c" variant="label-hidden" data-id={r.fakeId}  placeholder="type" onchange={handleSelectLine}> </lightning-input-field>
                 </div>
-                <div class="slds-col slds-size_1-of-8">
+                <div class="item">
                    <lightning-input-field field-name="IP_Quantity__c" variant="label-hidden" placeholder="Quantity" data-id={r.fakeId} onchange={handleSelectLine}> </lightning-input-field>
                 </div>
-
+               </div>
+             </div>
+             <div class="container flex-start" if:false={isNewbussines}>
+                <div class="item">
+                    <lightning-input-field field-name="IPI_WarrantyCode__c" variant="label-hidden" placeholder="Quantity" data-id={r.fakeId} onchange={handleSelectLine}> </lightning-input-field>
+                 </div>
+                 <div class="item">
+                    <lightning-input-field field-name="IPI_numberOfRenewalDays__c" variant="label-hidden" placeholder="Quantity" data-id={r.fakeId} onchange={handleSelectLine}> </lightning-input-field>
+                 </div>
              </div>
           </lightning-record-edit-form>
        </div>
     </template>
    <button class="slds-button slds-button_brand" disabled={enablebutton} onclick={saveRecords}> Create Quotes</button>
-   
+</lightning-card>
  </template>

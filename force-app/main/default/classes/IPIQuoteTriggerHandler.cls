@@ -63,11 +63,12 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
                 ctrl.IPI_WarrantyDays__c=qtdays;
                 ctrts.add(ctrl);
               }  
-              system.debug('teste '+JSON.serialize(ctrts));
-              if(ctrts.size()>0)
-                 insert ctrts;
-              
+             
             }
+            system.debug('teste '+JSON.serialize(ctrts));
+            if(ctrts.size()>0)
+               insert ctrts;
+            
         }
     
     }

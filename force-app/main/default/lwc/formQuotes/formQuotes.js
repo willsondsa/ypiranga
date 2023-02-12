@@ -4,11 +4,11 @@ import saveRecords from '@salesforce/apex/FormQuoteController.SaveRecords';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class FormQuotes extends LightningElement {
     @api records=[]
-    @api fields=['IPI_Client__c','IPI_Truck__c','IP_Quantity__c','IPI_Type__c'];
     @api objectApiName="IPI_Quote__c"
     @api listToCreate=[];
     enablebutton=true;
     load=false
+    isNewbussines=true;
 
  initTable(){
  this.records=[]
@@ -24,9 +24,16 @@ export default class FormQuotes extends LightningElement {
     if(event.target.fieldName==undefined){
         field='selected'
         valuefield=event.target.checked
+
     }else{
         field=event.target.fieldName
         valuefield=event.target.value
+        /*
+        if(field=="IPI_Type__c" && valuefield=="Renewal"){
+            this.isNewbussines=false;
+        }
+        */
+        
     }
     this.records.forEach(dta=>{
         if(dta.fakeId==idRow){
