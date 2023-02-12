@@ -1,0 +1,17 @@
+Access Token     00DDK000000Hm57!ARUAQOZz2bULA45OFI7.ZbWHhbLOrsQNQygddZw_ZA87Blv77kwx2a__0L01xOEw.tRsDUfws82IpqscKWuApEt80XbE8kuZ
+Alias            ipiranga
+Client Id        PlatformCLI
+Created By       willsondsa@mindful-fox-sr0tpv.com
+Created Date     2023-02-11T01:14:30.000+0000
+Dev Hub Id       willsondsa@mindful-fox-sr0tpv.com
+Edition          Developer
+Expiration Date  2023-03-13
+Id               00DDK000000Hm572AC
+Instance Url     https://baker-dyno-1243-dev-ed.scratch.my.salesforce.com
+Org Name         Demo company
+Password         g2niararvah&Y
+Status           Active
+Username         test-tlzwrffjuzpg@example.com  
+
+
+sfdx force:source:retrieve -m CustomField:Contact.CPF_CNPJ__C

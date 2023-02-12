@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>checkstock</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(ISPICKVAL(IPI_Status__c ,&apos;reserved&apos;), IP_Quantity__c &gt; IPI_Truck__r.Ipi_StockQuantity__c)</errorConditionFormula>
+    <errorMessage>Currently not enough stock.</errorMessage>
+</ValidationRule>

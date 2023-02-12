@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>IPI Trucks and Quotes</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Create_Quotes</tabs> 
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Ipi_Truck__c</tabs>
+    <tabs>IPI_Quote__c</tabs>
+    <tabs>IPI_warranty__c</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>standard-ContractLineItem</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>IPI_Trucks_and_Quotes_UtilityBar</utilityBar>
+</CustomApplication>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Home_IPiranga_Trucks</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
+    <brand>
+        <headerColor>#0070D2</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Ipiranga Trucks</label>
+    <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>Ipi_Truck__c</tabs>
+    <tabs>IPI_Quote__c</tabs>
+    <tabs>standard-Contract</tabs>
+    <tabs>standard-ContractLineItem</tabs>
+    <tabs>IPI_warranty__c</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-home</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Ipiranga_Trucks_UtilityBar</utilityBar>
+</CustomApplication>

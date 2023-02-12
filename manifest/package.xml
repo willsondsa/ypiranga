@@ -12,5 +12,13 @@
         <members>AccountTrigger</members>
         <name>ApexTrigger</name>
     </types>
+     <types>
+        <members>IPI_Trucks_and_Quotes</members>  
+        <name>CustomApplication</name>
+    </types>
+      <types>
+        <members>IPI_Trucks_and_Quotes</members>  
+        <name>CustomApplication</name>
+    </types>
     <version>55.0</version>
 </Package>  
