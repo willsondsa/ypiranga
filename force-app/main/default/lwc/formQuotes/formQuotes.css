@@ -1,0 +1,6 @@
+.flex-container {
+    display: flex;
+  }
+  .flex-item {
+    flex-grow: 3; /* o valor default(padrão) é 0 */
+  }

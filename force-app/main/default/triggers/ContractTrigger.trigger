@@ -1,3 +1,3 @@
-trigger ContractTrigger on contract (before insert) {
-
-}
+trigger ContractTrigger on contract (after insert) {
+  new ContractTriggerHAndler().start();
+} 
