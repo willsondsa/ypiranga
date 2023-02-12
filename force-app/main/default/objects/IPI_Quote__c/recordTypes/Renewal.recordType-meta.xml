@@ -3,4 +3,18 @@
     <fullName>Renewal</fullName>
     <active>true</active>
     <label>Renewal</label>
+    <picklistValues>
+        <picklist>IPI_Status__c</picklist>
+        <values>
+            <fullName>closed</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IPI_Type__c</picklist>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
 </RecordType>

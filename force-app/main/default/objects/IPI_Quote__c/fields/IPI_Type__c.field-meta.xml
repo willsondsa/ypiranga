@@ -13,7 +13,7 @@
             <sorted>false</sorted>
             <value>
                 <fullName>New Business</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>New Business</label>
             </value>
             <value>

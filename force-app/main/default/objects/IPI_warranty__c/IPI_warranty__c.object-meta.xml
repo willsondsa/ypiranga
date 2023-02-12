@@ -156,9 +156,10 @@
     <gender>Feminine</gender>
     <label>warranty</label>
     <nameField>
+        <displayFormat>A-{00000000}</displayFormat>
         <label>warranty Name</label>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>warranties</pluralLabel>
     <searchLayouts></searchLayouts>

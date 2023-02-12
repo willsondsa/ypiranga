@@ -8,6 +8,7 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <controllingField>IPI_Type__c</controllingField>
         <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
@@ -27,5 +28,14 @@
                 <label>open</label>
             </value>
         </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <valueName>reserved</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Renewal</controllingFieldValue>
+            <valueName>closed</valueName>
+        </valueSettings>
     </valueSet>
 </CustomField>

@@ -3,4 +3,30 @@
     <fullName>new_Bussiness</fullName>
     <active>true</active>
     <label>new Bussiness</label>
+    <picklistValues>
+        <picklist>IPI_Status__c</picklist>
+        <values>
+            <fullName>closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>open</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>reserved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IPI_Type__c</picklist>
+        <values>
+            <fullName>New Business</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Renewal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
 </RecordType>
