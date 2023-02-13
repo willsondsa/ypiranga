@@ -4,8 +4,7 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
         
         map<id,decimal> quotsPerTrucs=new map<id,decimal>();
         for(IPI_Quote__c quo:quotes){
-            if((oldQuotMap==null || (oldQuotMap.get(quo.id).IPI_Status__c!=quo.IPI_Status__c ||
-               oldQuotMap.get(quo.id).IP_Quantity__c!=quo.IP_Quantity__c) )&& ((quo.IPI_Status__c=='reserved'||quo.IPI_Status__c=='closed')&& quo.IPI_type__c!='Renewal')){
+            if((oldQuotMap==null || (oldQuotMap.get(quo.id).IP_Quantity__c!=quo.IP_Quantity__c) )&& ((quo.IPI_Status__c=='reserved'||quo.IPI_Status__c=='closed')&& quo.IPI_type__c!='Renewal')){
                 if(!quotsPerTrucs.containskey(quo.IPI_Truck__c))
                    quotsPerTrucs.put(quo.IPI_Truck__c,quo.IP_Quantity__c);
                  else 
