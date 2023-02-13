@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>check_quote</fullName>
+    <active>true</active>
+    <errorConditionFormula>And(not(ISNULL(IPI_Quote__c )),not(ISPICKVAL(IPI_Quote__r.IPI_Status__c ,&apos;closed&apos;)))</errorConditionFormula>
+    <errorMessage>Invalid Quote</errorMessage>
+</ValidationRule>
