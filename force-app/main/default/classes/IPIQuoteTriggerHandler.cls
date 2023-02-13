@@ -88,10 +88,10 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
         if(recordsToCheck.size()>0){
            List<Contract>ctrts= new List<Contract>();
            List<IPI_warranty__c> warranties=new List<IPI_warranty__c>();
+           List<IPI_Quote__c> quotdpd=new List<IPI_Quote__c>();
            for(IPI_warranty__c wr:[select id,IPI_Contract__c,IPI_Contract__r.IPI_Quote__c,IPI_Warrantycode__c from IPI_warranty__c where IPI_Warrantycode__c in:recordsToCheck and IPI_Status__c='Not Insured']){
                IPI_Quote__c quo=wuotsPercode.get(wr.IPI_Warrantycode__c);
-               system.debug('teste '+JSON.serialize(quo));
-               system.debug('teste '+wr.IPI_Contract__c);
+               quotdpd.add(new IPI_Quote__c(id=quo.id,IPI_InitialQuote__c=wr.IPI_Contract__r.IPI_Quote__c));
                ctrts.add(new Contract(id=wr.IPI_Contract__c, StartDate=Date.today(),IPI_WarrantyDays__c=quo.IPI_numberOfRenewalDays__c));
    
                warranties.add(new IPI_warranty__c(id=wr.id,  IPI_Duedate__c=Date.today().adddays((integer)quo.IPI_numberOfRenewalDays__c )));
@@ -106,9 +106,12 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
               update ctrts;
             if(warranties.size()>0)
                update warranties;
+            if(quotdpd.size()>0)
+               update quotdpd;
        }
 
     }
+    
     public override void afterInsert(List<SObject> newRecords, Map<ID, SObject> newRecordMap){
         this.checkStock((List<IPI_Quote__c>)newRecords,null);  
         this.checkContract((Map<ID,IPI_Quote__c>)newRecordMap,null) ;
@@ -117,6 +120,6 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
     public override void afterUpdate(List<SObject> oldRecords, List<SObject> newRecords, Map<ID, SObject> oldRecordMap, Map<ID, SObject> newRecordMap){
         this.checkStock((List<IPI_Quote__c>) newRecords,(Map<ID,IPI_Quote__c>)oldRecordMap);
         this.checkContract((Map<ID,IPI_Quote__c>)newRecordMap,(Map<ID,IPI_Quote__c>)oldRecordMap) ;
-        this.checkWarranties((Map<ID,IPI_Quote__c>)newRecordMap,(Map<ID,IPI_Quote__c>)oldRecordMap) ;
+        //this.checkWarranties((Map<ID,IPI_Quote__c>)newRecordMap,(Map<ID,IPI_Quote__c>)oldRecordMap) ;
     }
 }
