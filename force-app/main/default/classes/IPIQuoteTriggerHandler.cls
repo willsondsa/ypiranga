@@ -99,7 +99,7 @@ public with sharing class IPIQuoteTriggerHandler extends TriggerHandler {
            }
            for(IPI_Quote__c quo:newRecordMap.values()){
               if(recordsToCheck.contains(quo.IPI_WarrantyCode__c))
-                quo.addError('no guarantee was found for the code:'+quo.IPI_WarrantyCode__c);
+                quo.addError('no warranty found for the code:'+quo.IPI_WarrantyCode__c);
            }
           
            if(ctrts.size()>0)
